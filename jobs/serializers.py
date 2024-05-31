@@ -1,5 +1,11 @@
 from rest_framework import serializers
-from jobs.models import Job
+from jobs.models import Job, Category
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
 
 
 class NewestJobSerializer(serializers.ModelSerializer):
